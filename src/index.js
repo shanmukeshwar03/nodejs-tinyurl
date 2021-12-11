@@ -16,9 +16,7 @@ app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
 
 mongoose.connect(
   process.env.MONGO_URL,
-  {
-    ...JSON.parse(process.env.MONGO_CONFIG),
-  },
+  JSON.parse(process.env.MONGO_CONFIG),
   (err) => {
     if (err) console.log('Mongodb Connection failed')
     else console.log('Mongodb Connection succeed!')
