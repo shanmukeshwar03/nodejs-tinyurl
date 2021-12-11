@@ -1,0 +1,9 @@
+services:
+  tinyurl:
+    image: tinyurl
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5003:5003"
+    expose:
+      - "5003"
